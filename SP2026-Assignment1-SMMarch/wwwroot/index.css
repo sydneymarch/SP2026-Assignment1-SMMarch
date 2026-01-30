@@ -1,0 +1,51 @@
+:root{
+    --bg:#1f1f1f;
+    --text:#f5f5f5;
+    --accent:#ffd54f;
+}
+html,body{height:100%;}
+body{
+    margin:0;
+    background-color:var(--bg);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+}
+.container{
+    text-align:center;
+    max-width:1000px;
+    width:95%;
+    padding:2rem;
+    margin-top:3rem; /* push content down so image isn't cut off */
+}
+#Title{
+    margin:0 0 0.5rem 0;
+    font-size:2rem;
+}
+.cover-wrap{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+#CoverArt{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,0.08);
+    box-shadow:0 8px 30px rgba(0,0,0,0.7);
+}
+#rating{margin:0.5rem 0;color:var(--accent)}
+#Summary{max-width:800px;margin:1rem auto;color:#e9e9e9}
+#actors{padding:0;margin:0.5rem auto 1rem auto;max-width:260px}
+#actors li{list-style:none;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.imdb-link{color:var(--accent);text-decoration:none;font-weight:600}
+.video-wrap{margin-top:1rem;display:flex;justify-content:center}
+/* make iframe responsive */
+.video-wrap .frame{
+    width:100%;
+    max-width:969px;
+    aspect-ratio:969/441;
+}
+@media (max-width:480px){
+    #CoverArt{width:160px;height:160px}
+    #Title{font-size:1.4rem}
+}
